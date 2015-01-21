@@ -76,6 +76,7 @@ angular.module('froala', []).
 
 				ngModel.$render = function(){
 					element.editable('setHTML', ngModel.$viewValue || '', true);
+				  froala.$element.trigger('focus');
 				};
 
 				var froala = element.editable(options).data('fa.editable');
